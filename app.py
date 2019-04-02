@@ -1,10 +1,13 @@
+import os
+import sys
+
+import cv2
 from flask import Flask, send_from_directory
 from google.cloud import vision
-import os
-import scene_detection
+
+from scripts.scene_detection import *
 from scripts.text_to_speech import *
-import cv2
-import sys
+
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="credentials.json"
 
@@ -23,7 +26,7 @@ def reset():
 
 @app.route("/detect-text")
 def route_detect_text():
-    content = scene_detection.capture_frame()
+    content = capture_frame()
     cv2.imwrite('image.png', content)
     image = cv2.imread('image.png')
     _, encoded_image = cv2.imencode('.png', image)
@@ -46,7 +49,7 @@ def route_detect_text():
 
 @app.route("/detect-scene")
 def route_detect_scene():
-    scene,obj =scene_detection.scene_detect()
+    scene,obj = scene_detect()
     speech(scene)
     if obj != None:
         speech(obj)
