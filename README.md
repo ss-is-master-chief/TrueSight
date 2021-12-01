@@ -22,12 +22,3 @@ Once complete, run the script `app.py` like:
 ```
 python app.py
 ```
-
-## Project Maintainers
-
-* Sumit Saha: <a href="https://github.com/ss-is-master-chief">ss-is-master-chief</a>
-* Shubham Sharma: <a href="https://github.com/shubham1172">shubham1172</a>
-* Ankur Ranjan: <a href="https://github.com/black-sither">black-sither</a> 
-* Ishan Bhattacharya: <a href="https://github.com/WizIshan">WizIshan</a>
-* Anuja Negi: <a href="https://github.com/anujanegi">anujanegi</a>
-* Dipanshu Munjal: <a href="https://github.com/dipanshu1002">dipanshu1002</a>
